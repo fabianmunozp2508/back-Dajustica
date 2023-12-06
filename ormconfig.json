@@ -1,0 +1,18 @@
+{
+  "type": "mysql",
+  "host": "srv455.hstgr.io",
+  "port": 3306,
+  "username": "u948052382_dajustica",
+  "password": "D@justic1a2023",
+  "database": "u948052382_dajusticia",
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/entities/*.js"],
+  "migrations": ["src/migrations/*.js"],
+  "subscribers": ["src/subscribers/*.js"],
+  "cli": {
+    "entitiesDir": "src/entities",
+    "migrationsDir": "src/migrations",
+    "subscribersDir": "src/subscribers"
+  }
+}
