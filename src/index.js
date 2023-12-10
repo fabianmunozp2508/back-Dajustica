@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { createConnection, getConnectionManager } = require('typeorm');
 const clienteController = require('./controllers/clienteController');
+const clientFolder = require('./controllers/clientFolders')
 
 const app = express();
 const PORT = 3000;
@@ -28,6 +29,7 @@ app.use(async (req, res, next) => {
 });
 
 app.use('/api', clienteController);
+app.use('/api', clientFolder);
 
 const startServer = async () => {
   try {

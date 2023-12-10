@@ -1,0 +1,57 @@
+const { EntitySchema } = require('typeorm');
+
+module.exports = new EntitySchema({
+    name: 'archivo_carpetas',
+    tableName: 'archivo_carpetas',
+    columns: {
+        // Asegúrate de que este campo autoincrementable exista en tu base de datos o ajústalo según sea necesario.
+        id: { 
+            primary: true,
+            type: 'int',
+            generated: true 
+        },
+        PRE: { type: 'varchar', length: 20 },
+        NUN_CARPETA: { type: 'varchar', length: 15 },
+        NUN_CARPETA_2: { type: 'varchar', length: 30 },
+        FECHA_CREACION: { type: 'varchar', length: 10 },
+        ASOCIACION: { type: 'varchar', length: 14 },
+        CEDULA: { type: 'varchar', length: 17 },
+        GENERO: { type: 'varchar', length: 1 },
+        NOMBRES: { type: 'varchar', length: 32 },
+        APELLIDOS: { type: 'varchar', length: 35 },
+        FECHA_NACIMIENTO: { type: 'varchar', length: 10 },
+        EDAD_A_FECHA_JUBILALCION: { type: 'varchar', length: 7 },
+        RES_COLPENSIONES_ISS: { type: 'varchar', length: 30 },
+        FECHA_RESOLUCION: { type: 'varchar', length: 10 },
+        TOTAL_SEMANAS: { type: 'varchar', length: 12 },
+        VALOR_PENSION_INICIAL_ISS: { type: 'varchar', length: 13 },
+        FECHA_PENSION_INICIAL_ISS: { type: 'varchar', length: 12 },
+        TASA_REEMP_APLICADA: { type: 'varchar', length: 4 },
+        FECHA_RECONOCIMIENTO_JUBILACION: { type: 'varchar', length: 11 },
+        FECHA_A_PARTIR_PENSION_JUBILACION: { type: 'varchar', length: 11 },
+        MESADA_INICIAL_DE_LA_JUBILACION: { type: 'varchar', length: 9 },
+        FECHA_INGRESO_EMPRESA: { type: 'varchar', length: 10 },
+        FECHA_EGRESO_EMPRESA: { type: 'varchar', length: 10 },
+        FECHA_COMPARTICION: { type: 'varchar', length: 10 },
+        FECHA_DESCOMPARTIBILIDAD: { type: 'varchar', length: 9 },
+        VALOR_ANTES_COMPARTICION: { type: 'varchar', length: 9 },
+        VALOR_PENSION_VEJEZ_ISS: { type: 'varchar', length: 9 },
+        RETROACTIVO_SUSPENSO: { type: 'varchar', length: 11 },
+        VALOR_A_CARGO_DE_LA_EMPRESA: { type: 'varchar', length: 9 },
+        JURIS_DICCION: { type: 'varchar', length: 30 },
+        DIRECCION_RESIDENCIA: { type: 'varchar', length: 91 },
+        DIRECCION_RESIDENCIA_upd: { type: 'varchar', length: 84 },
+        TELEFONO: { type: 'varchar', length: 46 },
+        TELEFONO_ACTUALIZADO: { type: 'varchar', length: 40 },
+        EMAIL: { type: 'varchar', length: 56 },
+        GRUPO: { type: 'varchar', length: 29 },
+        GRUPO_2: { type: 'varchar', length: 30 },
+        ACTO_JUBILACION: { type: 'varchar', length: 31 },
+        TIPO: { type: 'varchar', length: 62 },
+        CONDICION: { type: 'varchar', length: 28 },
+        CEDULA_FALLECIDO: { type: 'varchar', length: 8 },
+        NOMBRE_FALLECIDO: { type: 'varchar', length: 39 },
+        RES_COLPENSIONES_ISS_FINADO: { type: 'varchar', length: 25 },
+        FECHA_RESOLUCION_FINADO: { type: 'varchar', length: 10 }
+    }
+});

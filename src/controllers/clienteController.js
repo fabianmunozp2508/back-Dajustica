@@ -25,6 +25,9 @@ router.post('/clientes', async (req, res) => {
   try {
     const connection = getConnection();
     const clienteRepository = connection.getRepository(Cliente);
+    
+    console.log('Valor de identidad_clientes recibido:', req.body.identidad_clientes);
+
     const nuevoCliente = clienteRepository.create(req.body);
     const resultado = await clienteRepository.save(nuevoCliente);
     res.status(201).json(resultado);
@@ -33,6 +36,7 @@ router.post('/clientes', async (req, res) => {
     res.status(500).send('Error al crear un cliente');
   }
 });
+
 
 // Endpoint para actualizar un cliente existente
 router.put('/clientes/:identidad_clientes', async (req, res) => {

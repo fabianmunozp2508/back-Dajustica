@@ -1,8 +1,8 @@
 const { EntitySchema } = require('typeorm');
 
 module.exports = new EntitySchema({
-  name: 'Cliente', // Nombre de la entidad, se usa en el código.
-  tableName: 'clientes', // Nombre de la tabla en la base de datos.
+  name: 'Cliente', 
+  tableName: 'clientes', 
   columns: {
     identidad_clientes: {
       primary: true,

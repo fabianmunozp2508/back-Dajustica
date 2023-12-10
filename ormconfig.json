@@ -1,10 +1,11 @@
+
 {
   "type": "mysql",
-  "host": "srv455.hstgr.io",
+  "host": "127.0.0.1",
   "port": 3306,
-  "username": "u948052382_dajustica",
-  "password": "D@justic1a2023",
-  "database": "u948052382_dajusticia",
+  "username": "root",
+  "password": "12345678",
+  "database": "dajustic_dajusticia_copia",
   "synchronize": true,
   "logging": true,
   "entities": ["src/entities/*.js"],
