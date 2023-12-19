@@ -39,12 +39,11 @@ router.post('/clientepension', async (req, res) => {
 });
 
 // Endpoint para actualizar un registro de cliente pension existente
-router.put('/clientepension/:id', async (req, res) => {
+router.put('/clientepension/:cedula', async (req, res) => {
   try {
-    const connection = getConnection();
-    const clientePensionRepository = connection.getRepository(ClientePension);
-    const id = req.params.id;
-    const clientePensionActualizado = await clientePensionRepository.findOne({ where: { id } });
+    const cedula = req.params.cedula;
+    const clientePensionRepository = getRepository(ClientePension);
+    const clientePensionActualizado = await clientePensionRepository.findOne({ where: { CEDULA: cedula } });
 
     if (!clientePensionActualizado) {
       return res.status(404).send('Cliente de pensión no encontrado');
